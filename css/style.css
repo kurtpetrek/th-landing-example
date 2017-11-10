@@ -1,5 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding-top: 50px;
+}
+
+.top-nav {
+  background: #000;
+  /* remove height later on if not needed */
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.landing {
+  background-image: url("../images/landing-mtn-lg.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2e0de;
+  text-align: center;
+  font-family: "Impact", sans-serif;
 }
