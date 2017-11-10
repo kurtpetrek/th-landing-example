@@ -35,4 +35,36 @@ body {
   color: #e2e0de;
   text-align: center;
   font-family: "Impact", sans-serif;
+  font-size: 50px;
+  transition: 0.5s;
+}
+
+@media (max-width: 1000px) {
+  .landing {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .landing {
+    background-image: url("../images/landing-mtn-sm.jpeg");
+  }
+}
+
+.row {
+  display: flex;
+}
+
+.col-3 {
+  width: 33.33%;
+}
+
+@media (max-width: 700px) {
+  .row {
+    display: block;
+  }
+
+  .col-3 {
+    width: 100%;
+  }
 }
