@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,15 +16,138 @@ body {
   padding-top: 50px;
 }
 
+h2 {
+  margin: 1rem 0;
+}
+
+p {
+  line-height: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+/*
+HEADING STYLES
+============================================================================
+*/
+
+.main-heading {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 1rem 0;
+}
+
+.main-heading small {
+  display: block;
+  font-variant: small-caps;
+}
+
+/*
+CONTAINER STYLES
+============================================================================
+*/
+
+.container-fluid {
+  padding: 1rem;
+}
+
+.md-parallax {
+  height: 300px;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.md-parallax h1 {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  border: 2px solid #11222b;
+  padding: 1rem;
+}
+
+/*
+BACKGROUND STYLES
+============================================================================
+*/
+
+.trees-bg {
+  background-image: url("../images/trees-lg.jpeg");
+}
+
+.mountain-lake-bg {
+  background-image: url("../images/mtn-lake-md.jpeg");
+}
+
+.ocean-bg {
+  background-image: url("../images/ocean-sunset-lg.jpeg");
+}
+/*
+NAV STYLES
+============================================================================
+*/
+
 .top-nav {
-  background: #000;
-  /* remove height later on if not needed */
+  background: #161616;
   height: 50px;
+  padding: 0 1rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
+
+.top-nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.top-nav-list li {
+  margin-left: 2rem;
+}
+
+.top-nav a {
+  color: #e2e0de;
+  text-decoration: none;
+  padding: 5px;
+  transition: 0.25s;
+  position: relative;
+}
+
+.top-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  background: #fff;
+  height: 1px;
+  width: 0;
+  transition: 0.25s;
+}
+
+.top-nav a:hover {
+  color: #fff;
+}
+
+.top-nav a:hover::after {
+  bottom: 5px;
+  left: 0%;
+  width: 100%;
+}
+
+.top-nav .brand {
+  font-size: 2rem;
+}
+
+/*
+LANDING STYLES
+============================================================================
+*/
 
 .landing {
   background-image: url("../images/landing-mtn-lg.jpeg");
@@ -51,12 +176,35 @@ body {
   }
 }
 
+/*
+CONTACT STYLES
+=====================================================================
+*/
+
+.contact-form label {
+  display: block;
+  width: 100%;
+}
+
+.contact-form input {
+  width: 100%;
+}
+
+/*
+GRID CLASSES
+=====================================================================
+*/
 .row {
   display: flex;
 }
 
 .col-3 {
   width: 33.33%;
+  padding: 1rem;
+}
+.col-2 {
+  width: 50%;
+  padding: 1rem;
 }
 
 @media (max-width: 700px) {
@@ -64,7 +212,23 @@ body {
     display: block;
   }
 
-  .col-3 {
+  .col-3,
+  .col-2 {
     width: 100%;
   }
+}
+
+/*
+UTILITY CLASSES
+=====================================================================
+*/
+
+.img-responsive {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.center-text {
+  text-align: center;
 }
